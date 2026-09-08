@@ -686,10 +686,12 @@ public partial class PlayerController : CharacterBody2D
 		else if (Velocity.Y > 0)
 			Velocity = new Vector2(Velocity.X, 0);
 	}
-
+//test
 	// PROPIEDADES PÚBLICAS
 
 	public HealthSystem  Health            => _health;
 	public PostureSystem Posture           => _posture;
 	public bool          ParryWindowActive => _parryActive;
 }
+
+//test
