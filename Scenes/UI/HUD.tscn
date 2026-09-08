@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cpgodd8nodat0"]
+
+[ext_resource type="Script" uid="uid://7bxmwl8cg2k0" path="res://Scripts/UI/HUD.cs" id="1_omqfp"]
+
+[node name="Hud" type="Control" unique_id=1865084948]
+layout_direction = 2
+layout_mode = 3
+anchor_right = 0.15900001
+anchor_bottom = 0.19000001
+offset_right = -183.16801
+offset_bottom = -123.12001
+script = ExtResource("1_omqfp")
+
+[node name="PlayerHealth" type="Control" parent="." unique_id=1642610604]
+anchors_preset = 0
+offset_left = 97.0
+offset_top = 114.0
+offset_right = 306.0
+offset_bottom = 149.0
+
+[node name="Label" type="Label" parent="PlayerHealth" unique_id=376339962]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.25800002
+offset_left = 108.0
+offset_top = -82.0
+offset_right = 105.077995
+offset_bottom = -59.0
+text = "HP"
+
+[node name="health_bar" type="ProgressBar" parent="PlayerHealth" unique_id=1644794713]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.65300006
+anchor_top = 4.927
+anchor_right = -0.65300006
+anchor_bottom = 4.927
+offset_left = 241.477
+offset_top = -229.445
+offset_right = 572.477
+offset_bottom = -202.445
+theme_override_colors/font_color = Color(0.50064, 0.96, 0.00959999, 1)
+theme_override_colors/font_outline_color = Color(0.88, 0.88, 0.88, 1)
+
+[node name="PlayerPosture" type="Control" parent="." unique_id=295381970]
+anchors_preset = 0
+offset_left = 297.0
+offset_top = 35.0
+offset_right = 337.0
+offset_bottom = 75.0
+
+[node name="Label" type="Label" parent="PlayerPosture" unique_id=931614175]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 9.002001
+anchor_top = 1.8880001
+anchor_right = 9.002001
+anchor_bottom = 1.8880001
+offset_left = -452.08002
+offset_top = -6.5200043
+offset_right = -365.08002
+offset_bottom = 16.479996
+text = "POSTURE"
+
+[node name="posture_bar" type="ProgressBar" parent="PlayerPosture" unique_id=2081656694]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 7.26
+anchor_top = 1.307
+anchor_right = 7.26
+anchor_bottom = 1.307
+offset_left = -387.40002
+offset_top = 41.719997
+offset_right = -52.400024
+offset_bottom = 68.72
+
+[node name="ParryIndicator" type="Control" parent="." unique_id=738119745]
+anchors_preset = 0
+offset_left = 249.0
+offset_top = 71.0
+offset_right = 289.0
+offset_bottom = 111.0
+
+[node name="Label" type="Label" parent="ParryIndicator" unique_id=2025734759]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 16.142
+anchor_top = -4.4480004
+anchor_right = 16.142
+anchor_bottom = -4.4480004
+offset_left = -270.68
+offset_top = 304.92
+offset_right = -158.68
+offset_bottom = 327.92
+
+[node name="StunIndicator" type="Label" parent="." unique_id=291947510]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 204.0
+offset_right = 231.0
+offset_bottom = 244.0
