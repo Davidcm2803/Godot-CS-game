@@ -46,6 +46,20 @@ public partial class HealthSystem : Node
 		EmitSignal(SignalName.HealthChanged, _currentHealth, MaxHealth);
 	}
 
+	// Aumenta el máximo de vida (ej: al conseguir 2 corazones de ogro).
+	// healCurrent=true además cura la diferencia agregada, no solo el tope.
+	public void IncreaseMaxHealth(float amount, bool healCurrent = true)
+	{
+		if (_isDead) return;
+		MaxHealth += amount;
+		if (healCurrent)
+			_currentHealth = Mathf.Clamp(_currentHealth + amount, 0f, MaxHealth);
+		else
+			_currentHealth = Mathf.Clamp(_currentHealth, 0f, MaxHealth);
+
+		EmitSignal(SignalName.HealthChanged, _currentHealth, MaxHealth);
+	}
+
 	// Restaura la salud al máximo y reactiva el personaje, usado para respawn.
 	public void ResetHealth()
 	{

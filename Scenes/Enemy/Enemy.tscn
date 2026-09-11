@@ -188,36 +188,30 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seemo"]
-size = Vector2(126, 106.5)
+size = Vector2(133, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljmj3"]
-size = Vector2(119.5, 110)
+size = Vector2(99, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shrp6"]
-size = Vector2(125, 106)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqoj7"]
-size = Vector2(128, 112.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jkxs"]
-size = Vector2(126.5, 108.5)
+size = Vector2(128, 67)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=533867082 groups=["player"]]
 position = Vector2(706, 459)
 script = ExtResource("1_fw0yv")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1507510649]
-position = Vector2(-24.99997, -19.187496)
-scale = Vector2(2.5000014, 2.083)
+position = Vector2(-13.759973, -19.048866)
+scale = Vector2(2.4266682, 2.03963)
 sprite_frames = SubResource("SpriteFrames_hn56f")
-animation = &"Death"
-frame_progress = 0.42088056
+animation = &"Running"
+frame_progress = 0.50450784
 flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1064639508]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1513006086]
-position = Vector2(7, -23.25)
+position = Vector2(5.5, -5.5)
 shape = SubResource("RectangleShape2D_seemo")
 
 [node name="HealthSystem" type="Node" parent="." unique_id=433487590]
@@ -231,7 +225,7 @@ script = ExtResource("4_02vxf")
 OwnerTag = "enemy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=644140858]
-position = Vector2(1.25, -26)
+position = Vector2(3.5, -5)
 shape = SubResource("RectangleShape2D_ljmj3")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1093256655]
@@ -239,21 +233,8 @@ script = ExtResource("6_seemo")
 OwnerTag = "enemy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=517836304]
-position = Vector2(7, -25)
+position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_shrp6")
 debug_color = Color(0.97, 0, 0, 0.41960785)
 
 [node name="PatrolArea" type="Marker2D" parent="." unique_id=1620618023]
-
-[node name="DetectionZone" type="Area2D" parent="." unique_id=1729325142]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone" unique_id=460928345]
-position = Vector2(6, -27.25)
-shape = SubResource("RectangleShape2D_xqoj7")
-
-[node name="AttackZone" type="Area2D" parent="." unique_id=271564973]
-position = Vector2(410, 14)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackZone" unique_id=1673295813]
-position = Vector2(-404.25, -40.25)
-shape = SubResource("RectangleShape2D_3jkxs")

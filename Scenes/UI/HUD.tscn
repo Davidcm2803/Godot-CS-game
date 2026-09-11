@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://cpgodd8nodat0"]
 
 [ext_resource type="Script" uid="uid://7bxmwl8cg2k0" path="res://Scripts/UI/HUD.cs" id="1_omqfp"]
+[ext_resource type="Texture2D" uid="uid://c02alc2wfrqvj" path="res://Resources/Ui/Healthbar.png" id="2_qc5w2"]
 
 [node name="Hud" type="Control" unique_id=1865084948]
-layout_direction = 2
 layout_mode = 3
 anchor_right = 0.15900001
 anchor_bottom = 0.19000001
 offset_right = -183.16801
 offset_bottom = -123.12001
+layout_direction = 2
 script = ExtResource("1_omqfp")
 
 [node name="PlayerHealth" type="Control" parent="." unique_id=1642610604]
@@ -18,29 +19,11 @@ offset_top = 114.0
 offset_right = 306.0
 offset_bottom = 149.0
 
-[node name="Label" type="Label" parent="PlayerHealth" unique_id=376339962]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.25800002
-offset_left = 108.0
-offset_top = -82.0
-offset_right = 105.077995
-offset_bottom = -59.0
-text = "HP"
-
-[node name="health_bar" type="ProgressBar" parent="PlayerHealth" unique_id=1644794713]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.65300006
-anchor_top = 4.927
-anchor_right = -0.65300006
-anchor_bottom = 4.927
-offset_left = 241.477
-offset_top = -229.445
-offset_right = 572.477
-offset_bottom = -202.445
-theme_override_colors/font_color = Color(0.50064, 0.96, 0.00959999, 1)
-theme_override_colors/font_outline_color = Color(0.88, 0.88, 0.88, 1)
+[node name="health_bar" type="Sprite2D" parent="PlayerHealth" unique_id=534312462]
+position = Vector2(185, -43.000004)
+scale = Vector2(4.764286, 4.549999)
+texture = ExtResource("2_qc5w2")
+hframes = 7
 
 [node name="PlayerPosture" type="Control" parent="." unique_id=295381970]
 anchors_preset = 0

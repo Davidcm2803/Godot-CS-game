@@ -1,13 +1,16 @@
-[gd_scene format=3 uid="uid://dglsikis22wpg"]
+[gd_scene format=3 uid="uid://ttbpat1x3e3a"]
 
-[ext_resource type="Texture2D" uid="uid://bql8lrrayeidf" path="res://Resources/Themes/Background.jpg" id="1_82rjm"]
-[ext_resource type="PackedScene" uid="uid://bre44dm48jugd" path="res://Scenes/Player/Player.tscn" id="1_if7go"]
-[ext_resource type="PackedScene" uid="uid://slruobkd445k" path="res://Scenes/Enemy/Enemy.tscn" id="2_82rjm"]
-[ext_resource type="PackedScene" uid="uid://cpgodd8nodat0" path="res://Scenes/UI/HUD.tscn" id="3_fn8j5"]
-[ext_resource type="Script" uid="uid://dek11lrt3a12m" path="res://Scripts/Level/LevelExit.cs" id="5_fn8j5"]
+[ext_resource type="Texture2D" uid="uid://cywieilqmpghn" path="res://Resources/Themes/Level2.png" id="1_dt2jm"]
+[ext_resource type="PackedScene" uid="uid://bre44dm48jugd" path="res://Scenes/Player/Player.tscn" id="2_ttejv"]
+[ext_resource type="PackedScene" uid="uid://slruobkd445k" path="res://Scenes/Enemy/Enemy.tscn" id="3_ctlrs"]
+[ext_resource type="PackedScene" uid="uid://cpgodd8nodat0" path="res://Scenes/UI/HUD.tscn" id="4_lrab5"]
+[ext_resource type="Script" uid="uid://dek11lrt3a12m" path="res://Scripts/Level/LevelExit.cs" id="5_lbqse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fn8j5"]
-size = Vector2(1146, 38)
+size = Vector2(1142, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aui74"]
+size = Vector2(271.5, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oof8r"]
 size = Vector2(140.5, 652.5)
@@ -16,35 +19,42 @@ size = Vector2(140.5, 652.5)
 size = Vector2(212.5, 651.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if7go"]
-size = Vector2(1416, 35)
+size = Vector2(1416, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
-size = Vector2(79, 288)
+size = Vector2(118.5, 508.5)
 
-[node name="DemoLevel" type="Node2D" unique_id=1355817904]
+[node name="level2" type="Node2D" unique_id=1355817904]
+position = Vector2(-139, -48)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=564658361]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=452822506]
+position = Vector2(-139, -48)
 
 [node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1479573011]
-position = Vector2(-18, 13)
-scale = Vector2(0.5963541, 0.6030093)
-texture = ExtResource("1_82rjm")
+position = Vector2(-3.3228512, 5)
+scale = Vector2(3.5542324, 3.556308)
+texture = ExtResource("1_dt2jm")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=532583072]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=2044295820]
-position = Vector2(-16, 320)
+position = Vector2(-6, 303)
 shape = SubResource("RectangleShape2D_fn8j5")
 debug_color = Color(0.5876768, 0.5455183, 0.1794259, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground" unique_id=1852362901]
+position = Vector2(-134.75, 166.75)
+shape = SubResource("RectangleShape2D_aui74")
+debug_color = Color(0.8446174, 0.30841833, 0.5718288, 0.41960785)
 
 [node name="Walls" type="Node2D" parent="." unique_id=1159597233]
 
 [node name="WallLeft" type="StaticBody2D" parent="Walls" unique_id=1519143833]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeft" unique_id=1393876939]
-position = Vector2(-660.25, 13.75)
+position = Vector2(-663, 16)
 shape = SubResource("RectangleShape2D_oof8r")
 debug_color = Color(0.5876768, 0.5455183, 0.1794259, 0.41960785)
 
@@ -52,32 +62,31 @@ debug_color = Color(0.5876768, 0.5455183, 0.1794259, 0.41960785)
 position = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight" unique_id=96341311]
-position = Vector2(661.75, 13.25)
+position = Vector2(670, 7)
 shape = SubResource("RectangleShape2D_jqg1o")
 debug_color = Color(0.5876768, 0.5455183, 0.1794259, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1070269565]
-position = Vector2(121, 62)
-offset = Vector2(-130, 0)
+position = Vector2(-8, 10)
 
-[node name="Player" parent="." unique_id=758193243 instance=ExtResource("1_if7go")]
-position = Vector2(-513, -202)
+[node name="Player" parent="." unique_id=758193243 instance=ExtResource("2_ttejv")]
+position = Vector2(-34, -16)
 
-[node name="Enemy" parent="." unique_id=1382487889 instance=ExtResource("2_82rjm")]
-position = Vector2(269, 273)
+[node name="Enemy" parent="." unique_id=1382487889 instance=ExtResource("3_ctlrs")]
+position = Vector2(-43, 145)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=669090948]
 layer = 10
 
-[node name="Hud" parent="UI" unique_id=1675746715 instance=ExtResource("3_fn8j5")]
+[node name="Hud" parent="UI" unique_id=1675746715 instance=ExtResource("4_lrab5")]
 anchor_left = 0.44500002
 anchor_top = -0.43600002
 anchor_right = 0.44500002
 anchor_bottom = -0.43600002
-offset_left = -712.64
-offset_top = 268.528
-offset_right = -585.64
-offset_bottom = 333.528
+offset_left = -851.64
+offset_top = 220.52802
+offset_right = -724.64
+offset_bottom = 285.528
 layout_direction = 0
 metadata/_edit_use_anchors_ = true
 
@@ -85,15 +94,18 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-379, 34)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundary" unique_id=819584883]
-position = Vector2(713, 628)
+position = Vector2(368, 287.5)
 shape = SubResource("RectangleShape2D_if7go")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=991770922]
-position = Vector2(992, 269)
-script = ExtResource("5_fn8j5")
-TargetScenePath = "res://Scenes/Level/level2.tscn"
+position = Vector2(403, -42)
+script = ExtResource("5_lbqse")
+TargetScenePath = "res://Scenes/Level/DemoLevel.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1903738604]
-position = Vector2(-398, -69)
+position = Vector2(-1034, 124)
 shape = SubResource("RectangleShape2D_lfkbx")
-debug_color = Color(0.9399353, 0.055541836, 0.5906923, 0.41960785)
+debug_color = Color(0.933397, 0.09598907, 0.59120697, 0.41960785)
+
+[node name="SpawnLeft" type="Marker2D" parent="." unique_id=1204155557]
+position = Vector2(-565, -238)
