@@ -1,14 +1,6 @@
 # One Thunder
 
-Un action-platformer 2D construido en **Godot 4.7 + C#**, con combate cuerpo a cuerpo, sistema de postura, parry, dash y una IA enemiga diseñada para perseguir con intención — no para pasearse de fondo.
-
----
-
-## Sobre el proyecto
-
-**One Thunder** nació como un experimento de combate ágil estilo *souls-lite / metroidvania*, inspirado en la sensación de peligro constante de juegos como *Blasphemous*: enemigos que no patrullan por patrullar, sino que te cazan de verdad apenas te tienen a tiro.
-
-El desarrollo fue un proceso intenso de iteración: cada sistema —salud, postura, detección, animación— se construyó, se rompió, se depuró y se reconstruyó hasta que se sintiera *correcto*, no solo funcional. Nada de esto se armó de un tirón; se fue afinando a fuerza de jugar, fallar, loguear, y volver a jugar.
+Un action-platformer 2D construido en **Godot 4.7 + C#**, con combate cuerpo a cuerpo, sistema de postura, parry, dash y una IA enemiga 
 
 ---
 
